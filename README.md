@@ -1,8 +1,9 @@
 # Aqueous-solubility-prediction
-This is an example of the model validation repository for the Outreachy contributors 2024
+Predicting how well a drug dissolves in water is not easy and here comes SolTranNet which is a  ML tool to predict aqueous solubility from a molecule’s SMILES representation.It's pretty accurate, with a low error rate in its predictions on two different sets of data.
 
 ## Identifiers
 EOS model ID: `eos6oli`
+
 Slug: `soltrannet-aqueous-solubility`
 
 ## Repository organisation
@@ -13,17 +14,10 @@ The repository is organised in folders:
 - '/src' contains important functions I will re-use throughout the repository, to avoid typing them each time
 - '/figures' contains the plots I have produced during the model validation process
 - 'requirements.txt' lists all the required packages to run the notebooks in this repository. If possible I also specify the version of the package I am using.
-  
-## How to use this repository
-This repository is just a guideline, it does not contain any real example, hence some folders might not be existing yet. There are mostly placeholders to inspire you.
 
-Use the notebooks as they have been defined, there is a code block with instructions of what step should be done there. Remember to install and import all the necessayr packages. Do not use installs from the Notebook directly, create a conda environment and install the packages in that environment.
-
-## Where to get more help:
-- Read Outreachy's contribution tasks
-- Read Ersilia's documentation
-- Get inspiration from Ersilia's work, for example on this repository for data processing
-- Use Slack to ask the mentors and the other interns for help!
-  
+## Model Check
+### 1. Model Bias Check
+The scatter plot does not show clear signs of bias in the model's predictions in terms of systematic errors. The predictions are varied and do not exhibit a consistent pattern of over- or under-predicting solubility based on the molecule's ID in the dataset,  it's a positive indication that SolTranNet is a robust model for predicting aqueous solubility.
+![Model Bias](./figures/Model%20Bias.png)
 ## License
 All the code in this repository is licensed under a GPLv3 License.
